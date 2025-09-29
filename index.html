@@ -33,9 +33,14 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    nav h2 {
-      color: white;
-      font-size: 1.8rem;
+    .logo-container {
+      height: 40px; /* Adjust height as needed */
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-container img {
+      height: 100%;
     }
 
     nav a {
@@ -188,7 +193,9 @@
 </head>
 <body>
   <nav>
-    <h2>Spark a Story</h2>
+    <div class="logo-container">
+      <img src="https://i.ibb.co/L5QyL3P/Spark-3.png" alt="Spark a Story Logo">
+    </div>
     <div>
       <a href="#about">About</a>
       <a href="#signup">Join Us</a>
