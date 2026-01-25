@@ -5,296 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Spark a Story</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --neon-orange: #ff914d;
-  --neon-yellow: #ffeb73;
-  --white: #fff;
-  --black-border: 2px solid #000;
-  --radius: 12px;
-  --padding: 1.5rem;
-  --max-width: 1200px;
-  --transition: 0.3s ease-in-out;
-}
-
-/* ===== BASE ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-body {
-  background: #fff9f0;
-  color: #333;
-  line-height: 1.6;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* ===== HEADER ===== */
-header {
-  background: var(--neon-orange);
-  padding: 4rem 2rem;
-  text-align: center;
-  border-bottom: var(--black-border);
-  border-radius: var(--radius);
-}
-header h1 {
-  font-size: 3rem;
-  color: var(--white);
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-}
-header p {
-  font-size: 1.2rem;
-  color: var(--white);
-}
-
-/* ===== NAVBAR ===== */
-nav {
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  background: var(--neon-yellow);
-  padding: 1rem 0;
-  border-bottom: var(--black-border);
-  border-radius: var(--radius);
-  z-index: 1000;
-}
-nav a {
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  border: var(--black-border);
-  border-radius: var(--radius);
-  transition: var(--transition);
-}
-nav a:hover {
-  background: var(--neon-orange);
-  color: #fff;
-}
-
-/* ===== HERO ===== */
-.hero {
-  min-height: 60vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
-}
-.hero h2 {
-  font-size: 2.5rem;
-  color: var(--neon-orange);
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-.hero p {
-  font-size: 1.2rem;
-  max-width: 700px;
-  color: #333;
-}
-
-/* ===== SECTIONS ===== */
-section {
-  max-width: var(--max-width);
-  margin: 3rem auto;
-  padding: var(--padding);
-  border: var(--black-border);
-  border-radius: var(--radius);
-  background: var(--white);
-  text-align: left;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  overflow-wrap: break-word;
-  line-height: 1.6;
-}
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--neon-orange);
-}
-section p {
-  font-size: 1.1rem;
-  color: #333;
-}
-
-/* ===== FEATURED STORIES ===== */
-.featured-stories {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-.story-card {
-  border: var(--black-border);
-  border-radius: var(--radius);
-  padding: 1rem;
-  background: var(--neon-yellow);
-  transition: transform var(--transition);
-}
-.story-card:hover {
-  transform: translateY(-5px);
-}
-.story-card h3 {
-  color: var(--neon-orange);
-  margin-bottom: 0.5rem;
-}
-.story-card p {
-  font-size: 0.95rem;
-}
-
-/* ===== SIGN UP ===== */
-.cta iframe {
-  border: var(--black-border);
-  border-radius: var(--radius);
-  margin-top: 1rem;
-  max-width: 100%;
-}
-
-/* ===== VIDEOS ===== */
-.video-container iframe {
-  border: var(--black-border);
-  border-radius: var(--radius);
-  max-width: 100%;
-  margin-top: 1rem;
-}
-
-/* ===== TEAM ===== */
-.team-bio {
-  text-align: center;
-  padding: 2rem;
-}
-.team-bio h3 {
-  color: var(--neon-orange);
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-.team-bio p {
-  font-size: 1.1rem;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  background: var(--neon-yellow);
-  color: #333;
-  text-align: center;
-  padding: 2rem;
-  border-top: var(--black-border);
-  border-radius: var(--radius);
-}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:768px){
-  nav { flex-direction: column; gap: 1rem; }
-  .featured-stories { grid-template-columns: 1fr; }
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
   <h1>Spark a Story</h1>
   <p>Helping kids bring their stories to life</p>
 </header>
 
-<!-- NAVIGATION -->
 <nav>
-  <a href="#about">About</a>
-  <a href="#signup">Sign Up</a>
-  <a href="#featured">Featured Stories</a>
-  <a href="#videos">Videos</a>
-  <a href="#team">Team</a>
+  <a href="index.html">Home</a>
+  <a href="mission.html">Mission</a>
+  <a href="team.html">Team</a>
+  <a href="services.html">Services</a>
+  <a href="donate.html">Donate</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <h2>Empower Young Voices</h2>
   <p>Workshops, resources, and community support to help kids turn ideas into powerful stories.</p>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <h2>Our Mission</h2>
-  <p>
-    At Spark a Story, we believe every young voice deserves to be heard.  
-    Through free workshops, online resources, and community support,  
-    we help kids share their ideas and transform them into powerful stories.
-  </p>
-  <p>
-    Our next events/classes:<br>
-    <strong>Writing and Publishing class:</strong> October 4th - October 26th, 10:00-11:00 every Saturday and Sunday morning (Central Standard Time)<br>
-    In this free class, students in grades 1 to 6 have the opportunity to learn valuable techniques and methods in creative writing, along with the skills needed to revise and critique manuscripts.  
-    All students will have the option to potentially self-publish their short stories in a collection through Spark a Story.<br>
-    <strong>SPOTS ARE LIMITED!</strong>
-  </p>
+<section>
+  <h2>Welcome</h2>
+  <p>Spark a Story is a youth-led nonprofit that helps kids build confidence through storytelling, writing, and self-expression.</p>
 </section>
 
-<!-- SIGN UP -->
-<section id="signup" class="cta">
-  <h2>Sign Up</h2>
-  <p>Join our mailing list to hear about workshops and new resources!</p>
-  <iframe 
-    src="https://docs.google.com/forms/d/e/1FAIpQLSdu68mp17PfvZHtJxOMgl0DQeVHqv9IGKClO14IQdpN7ggBbQ/viewform?embedded=true" 
-    width="640" 
-    height="1633" 
-    frameborder="0" 
-    marginheight="0" 
-    marginwidth="0">
-    Loading…
-  </iframe>
-</section>
-
-<!-- FEATURED STORIES -->
-<section id="featured">
-  <h2>Featured Stories</h2>
-  <div class="featured-stories">
-    <div class="story-card">
-      <h3>Shards of Hope</h3>
-      <p>When a single moment shatters her world, one boy must piece together the fragments of truth, trust, and courage to find his place again.</p>
-    </div>
-    <div class="story-card">
-      <h3>Coming Soon!</h3>
-      <p></p>
-    </div>
-    <div class="story-card">
-      <h3>Coming Soon!</h3>
-      <p></p>
-    </div>
-  </div>
-</section>
-
-<!-- VIDEOS -->
-<section id="videos">
-  <h2>Our Videos</h2>
-  <p>Check out our latest content on YouTube:</p>
-  <div class="video-container">
-    <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-      title="Spark a Story Intro Video"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
-
-<!-- TEAM -->
-<section id="team">
-  <h2>Meet the Team</h2>
-  <div class="team-bio">
-    <h3>Dhilan Saluja</h3>
-    <p>Founder | Passionate about helping kids share their stories and develop their creativity.</p>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
   <p>© 2025 Spark a Story | Built with ❤️ by young writers for young writers</p>
 </footer>
