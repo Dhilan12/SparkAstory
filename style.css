@@ -1,134 +1,146 @@
-/* — Brand Colors */
 :root {
-  --primary-color: #e07a5f; /* warm, professional orange */
-  --secondary-color: #3d405b; /* deep slate purple */
-  --accent-color: #81b29a; /* soft green accent */
-  --bg-light: #f8f4f2;
-  --text-dark: #2b2d42;
-  --border-light: rgba(0,0,0,0.1);
-
-  --radius: 10px;
-  --padding: 1.6rem;
+  --bg: #f5f0e8; /* beige background */
+  --text: #2b2b2b;
+  --accent: #b07d62; /* warm brown */
+  --dark: #1f1f1f;
+  --border: rgba(0,0,0,0.12);
   --max-width: 1100px;
-  --transition: 0.3s ease-in-out;
+  --transition: 0.3s;
 }
 
-/* — Base */
-body {
-  font-family: 'Poppins', sans-serif;
-  background: var(--bg-light);
-  color: var(--text-dark);
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* — Navigation */
-nav {
-  background: #fff;
-  border-bottom: 1px solid var(--border-light);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+body {
+  background: var(--bg);
+  color: var(--text);
 }
-nav .container {
+
+/* HEADER */
+header {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.header-container {
   max-width: var(--max-width);
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1.2rem 2rem;
 }
-nav .logo {
-  font-weight: 700;
-  font-size: 1.6rem;
-  color: var(--primary-color);
-}
-nav .nav-links {
+
+/* Logo */
+.logo {
   display: flex;
-  gap: 1.4rem;
+  align-items: center;
+  gap: 0.8rem;
 }
+
+.logo-img {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+/* NAV */
+nav.nav {
+  display: flex;
+  gap: 1.2rem;
+}
+
 nav a {
+  text-decoration: none;
+  color: var(--text);
   font-weight: 600;
-  padding: 0.6rem 1rem;
-  border-radius: var(--radius);
-  color: var(--text-dark);
+  padding: 0.4rem 0.6rem;
   transition: var(--transition);
 }
+
 nav a:hover {
-  background: var(--primary-color);
-  color: white;
+  color: var(--accent);
 }
 
-/* — Hero */
-.hero-section {
-  text-align: center;
-  padding: 4rem 2rem;
-}
-.hero-section h1 {
-  font-size: 2.8rem;
-  color: var(--secondary-color);
-  margin-bottom: 0.8rem;
-}
-.hero-section p {
-  font-size: 1.2rem;
-  color: #444;
-}
-
-/* — Section Containers */
-section {
-  background: white;
-  margin: 2rem auto;
-  padding: var(--padding);
-  border-radius: var(--radius);
+/* HERO */
+.hero {
   max-width: var(--max-width);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin: 2rem auto;
+  padding: 2.5rem 2rem;
+  background: #fff;
+  border: 1px solid var(--border);
 }
-section h2 {
-  color: var(--secondary-color);
-  font-size: 2rem;
+
+.hero h1 {
+  font-size: 2.6rem;
+  color: var(--dark);
   margin-bottom: 1rem;
 }
-section p {
-  font-size: 1.05rem;
-  line-height: 1.6;
+
+.hero p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.4rem;
 }
 
-/* — Professional Cards */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.6rem;
-}
-.card {
-  padding: 1.4rem;
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius);
-  transition: var(--transition);
-}
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
-}
-
-/* — Buttons */
+/* BUTTON */
 .btn {
   display: inline-block;
-  background: var(--accent-color);
+  padding: 0.9rem 1.6rem;
+  background: var(--accent);
   color: white;
-  padding: 0.75rem 1.3rem;
-  border-radius: var(--radius);
   font-weight: 700;
   text-decoration: none;
   transition: var(--transition);
 }
+
 .btn:hover {
-  background: var(--primary-color);
+  background: #8b5f48;
 }
 
-/* — Footer */
-footer {
-  background: white;
-  text-align: center;
+/* CONTENT SECTION */
+.content {
+  max-width: var(--max-width);
+  margin: 2rem auto;
   padding: 2rem;
-  border-top: 1px solid var(--border-light);
+  background: #fff;
+  border: 1px solid var(--border);
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+
+.card {
+  padding: 1.2rem;
+  background: #fff;
+  border: 1px solid var(--border);
+}
+
+.card h3 {
+  margin-bottom: 0.6rem;
+}
+
+/* FOOTER */
+footer {
+  background: #fff;
+  border-top: 1px solid var(--border);
+  padding: 1.6rem;
+  text-align: center;
 }
