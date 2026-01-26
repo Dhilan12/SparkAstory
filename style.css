@@ -1,9 +1,10 @@
 :root {
-  --bg: #f6f2ed;          /* beige background */
+  /* Updated to a warmer, orangey-beige */
+  --bg: #fcebd7;           
   --white: #ffffff;
   --text: #2b2b2b;
-  --accent: #b08b6f;      /* warm brown */
-  --accent-dark: #8a6a53;
+  --accent: #d14d42;      /* Spark a Story Red */
+  --accent-dark: #a13a32;
   --border: rgba(0,0,0,0.12);
   --max-width: 1200px;
   --transition: 0.3s;
@@ -24,11 +25,8 @@ html, body {
 body {
   background: var(--bg);
   color: var(--text);
-
   font-family: 'Playfair Display', serif;
   line-height: 1.6;
-
-  /* Sticky footer fix */
   display: flex;
   flex-direction: column;
 }
@@ -109,11 +107,6 @@ nav a:hover {
   margin-bottom: 1rem;
 }
 
-.hero p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-
 /* BUTTON */
 .btn {
   display: inline-block;
@@ -138,26 +131,38 @@ nav a:hover {
   border: 1px solid var(--border);
 }
 
-.section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.section p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-}
-
-/* CARDS */
+/* CARDS & LINKS */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.card-link {
+  text-decoration: none; /* Removes underline from the whole card */
+  color: inherit;        /* Keeps text color same as body */
+  display: block;
+  transition: var(--transition);
 }
 
 .card {
   border: 1px solid var(--border);
   padding: 1.4rem;
+  height: 100%;
+  background: var(--white);
+  transition: var(--transition);
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--accent); /* Makes story titles stand out */
 }
 
 /* FOOTER */
@@ -166,8 +171,5 @@ footer {
   border-top: 1px solid var(--border);
   padding: 1.6rem;
   text-align: center;
-
-  /* keeps footer at bottom */
   margin-top: auto;
 }
-
