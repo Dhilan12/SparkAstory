@@ -89,9 +89,8 @@ nav a:hover {
 
 .hero-inner {
   max-width: 900px;
-  background: rgba(255,255,255,0.92);
+  background: rgba(255,255,255,0.95);
   padding: 3.5rem 3rem;
-  border-radius: 20px;
   border: 1px solid var(--border);
   text-align: center;
   animation: fadeUp 1s ease forwards;
@@ -114,11 +113,11 @@ nav a:hover {
   background: var(--accent);
   color: white;
   padding: 0.95rem 2rem;
-  border-radius: 999px;
   font-weight: 600;
   text-decoration: none;
   font-size: 1.05rem;
   transition: var(--transition);
+  border-radius: 0; /* straight edges */
 }
 
 .btn:hover {
@@ -132,9 +131,9 @@ nav a:hover {
   margin: 4rem auto;
   padding: 3rem;
   background: var(--white);
-  border-radius: 20px;
   border: 1px solid var(--border);
   box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+  border-radius: 0; /* straight edges */
 }
 
 .section h2 {
@@ -149,7 +148,6 @@ nav a:hover {
   background: var(--accent);
   display: block;
   margin-top: 14px;
-  border-radius: 2px;
 }
 
 .section > p {
@@ -170,8 +168,8 @@ nav a:hover {
   background: var(--white);
   border: 1px solid var(--border);
   padding: 2rem;
-  border-radius: 18px;
   transition: var(--transition);
+  border-radius: 0; /* straight edges */
 }
 
 .card:hover {
@@ -189,9 +187,9 @@ nav a:hover {
 /* FORM */
 .form-container {
   margin-top: 4rem;
-  border-radius: 16px;
-  overflow: hidden;
   border: 1px solid var(--border);
+  overflow: hidden;
+  border-radius: 0; /* straight edges */
 }
 
 /* FOOTER */
