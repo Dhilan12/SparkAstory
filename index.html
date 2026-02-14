@@ -7,6 +7,41 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+<!-- Bouncing Pencil -->
+<img src="pencil.png" id="bouncing-pencil" alt="Pencil">
+
+<script>
+  const pencil = document.getElementById("bouncing-pencil");
+
+  let x = 100;
+  let y = 100;
+  let dx = 2;
+  let dy = 2;
+
+  function animate() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    x += dx;
+    y += dy;
+
+    // Bounce off walls
+    if (x + pencil.offsetWidth >= width || x <= 0) {
+      dx *= -1;
+    }
+    if (y + pencil.offsetHeight >= height || y <= 0) {
+      dy *= -1;
+    }
+
+    pencil.style.left = x + "px";
+    pencil.style.top = y + "px";
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+</script>
+
 <body>
 
 <header>
