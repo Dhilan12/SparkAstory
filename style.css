@@ -194,14 +194,13 @@ nav a:hover {
 
 #bouncing-pencil {
   position: fixed;
-  width: 60px; /* adjust size */
+  width: 150px; /* bigger pencil */
   height: auto;
   left: 100px;
   top: 100px;
   z-index: 2000;
   pointer-events: none; /* so it doesn't block clicks */
 }
-
 
 /* FOOTER */
 footer {
