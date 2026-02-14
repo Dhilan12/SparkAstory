@@ -5,48 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spark a Story</title>
 
-  <!-- Upgraded Editorial Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Make pencil pass through everything */
+    #bouncing-pencil {
+      position: fixed;
+      width: 120px; /* bigger pencil */
+      height: auto;
+      left: 100px;
+      top: 100px;
+      z-index: 0; /* behind content */
+      pointer-events: none; /* clicks go through */
+    }
+
+    /* Make sure content is above pencil */
+    body > *:not(#bouncing-pencil) {
+      position: relative;
+      z-index: 1;
+    }
+
+    body {
+      margin: 0;
+      overflow: hidden; /* prevents scrollbars from bounce */
+    }
+  </style>
 </head>
+
+<body>
 
 <!-- Bouncing Pencil -->
 <img src="yellow-pencil-and-pink-eraser-on-it-3d-illustration-png.png" id="bouncing-pencil" alt="Pencil">
-
-<script>
-  const pencil = document.getElementById("bouncing-pencil");
-
-  let x = 100;
-  let y = 100;
-  let dx = 2;
-  let dy = 2;
-
-  function animate() {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-
-    x += dx;
-    y += dy;
-
-    // Bounce off walls
-    if (x + pencil.offsetWidth >= width || x <= 0) {
-      dx *= -1;
-    }
-    if (y + pencil.offsetHeight >= height || y <= 0) {
-      dy *= -1;
-    }
-
-    pencil.style.left = x + "px";
-    pencil.style.top = y + "px";
-
-    requestAnimationFrame(animate);
-  }
-
-  animate();
-</script>
-
-<body>
 
 <header>
   <div class="header-container">
@@ -90,6 +80,38 @@
 <footer>
   © 2026 Spark a Story | Youth-Led Nonprofit
 </footer>
+
+<script>
+  const pencil = document.getElementById("bouncing-pencil");
+
+  let x = 100;
+  let y = 100;
+  let dx = 2;
+  let dy = 2;
+
+  function animate() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    x += dx;
+    y += dy;
+
+    // Bounce only on window edges (background edges)
+    if (x + pencil.offsetWidth >= width || x <= 0) {
+      dx *= -1;
+    }
+    if (y + pencil.offsetHeight >= height || y <= 0) {
+      dy *= -1;
+    }
+
+    pencil.style.left = x + "px";
+    pencil.style.top = y + "px";
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+</script>
 
 </body>
 </html>
